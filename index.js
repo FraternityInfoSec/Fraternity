@@ -98,10 +98,20 @@ app.post('/contact', (req, res)=>{
     res.redirect('/contact');
 })
 
+app.get('/frameworks',(req, res)=>{
+  res.render('frameworks')
+});
+
+app.get('/security',(req, res)=>{
+  res.render('security')
+})
+
 
 app.get('*', (req, res)=>{
     res.send('<center><h2>404 <p>Page not found</h2><br>You are lost man...<br><hr></center>');
-})
+});
+
+
 
 app.listen(port, ()=>{
     console.log('[*] Server started')
